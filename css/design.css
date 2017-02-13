@@ -64,6 +64,21 @@ overflow:hidden;
 
 /*---------------------------------------------------------------------------------------------------------------*/
 /*Strip the ul of padding and list styling*/
+
+
+nav{
+	opacity: 0.5;
+	position:absolute;
+	margin-left:auto;
+	 margin-right: auto; 
+	 left:30%;
+	 right:0;	
+	 font-size: 28px;
+	 position: fixed; 
+	 top: 32px;
+	  display: flex; 
+	  flex-wrap: nowrap; 
+}
 ul {
 	list-style-type:none;
 	margin:0;
@@ -139,6 +154,13 @@ ul li a:hover + .hidden, .hidden:hover {
 /*Responsive Styles*/
 
 @media screen and (max-width : 760px){
+	nav{
+	opacity: 0.5;
+	position:absolute;
+	margin-left:auto;
+	 margin-right: auto; 
+	 left:0;
+}
 	/*Make dropdown links appear inline*/
 	ul {
 		position: static;
@@ -158,4 +180,11 @@ ul li a:hover + .hidden, .hidden:hover {
 
 .link{
 	text-decoration: none; color:lightgoldenrodyellow;
+}
+
+#artikel{
+	flex: 2; 
+	border-right-width: 1px;
+	padding-left:15%; 
+	padding-right: 15%;
 }
