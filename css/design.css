@@ -154,7 +154,7 @@ ul li a:hover + .hidden, .hidden:hover {
 
 /*Responsive Styles*/
 
-@media screen and (max-width : 760px){
+@media screen and (max-device-width : 760px){
 	nav{
 	opacity: 0.5;
 	position:absolute;
