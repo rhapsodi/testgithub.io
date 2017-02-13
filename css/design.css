@@ -66,7 +66,6 @@ overflow:hidden;
 /*Strip the ul of padding and list styling*/
 
 
-
 nav{
 	opacity: 0.5;
 	position:absolute;
@@ -103,13 +102,14 @@ li a {
 	line-height: 50px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #fff;
-	background: #2f3036;
+	background: #555;
 	text-decoration: none;
 }
 
 /*Hover state for top level links*/
 li:hover a {
-	background: #19c589;
+	background: #222;
+	color:mediumvioletred;
 }
 
 /*Style for dropdown links*/
@@ -118,12 +118,14 @@ li:hover ul a {
 	color: #2f3036;
 	height: 40px;
 	line-height: 40px;
+
 }
 
 /*Hover state for dropdown links*/
 li:hover ul a:hover {
-	background: #19c589;
+	background:mediumvioletred;
 	color: #fff;
+	
 }
 
 /*Hide dropdown links until they are needed*/
@@ -150,22 +152,45 @@ ul li a:hover + .hidden, .hidden:hover {
 }
 
 
-
-
 /*Responsive Styles*/
-
-@media screen and (max-device-width : 760px){
+/*mobile Geräte*/
+@media screen and (max-device-width : 500px)  {
 	nav{
 	opacity: 0.5;
-	position:absolute;
-	margin-left:auto;
-	 margin-right: auto; 
 	 left:0;
 }
 	/*Make dropdown links appear inline*/
 	ul {
 		position: static;
 		display: block;
+		width:100%;
+	}
+	/*Create vertical spacing*/
+	li {
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	ul li, li a {
+		width: 100%;
+	}
+	.sidebar{
+		display:none;
+	}
+}
+/*PC- Bildschirm*/
+@media screen and (max-width : 1000px)  {
+.sidebar{
+	display: none;
+}
+	nav{
+	opacity: 0.5;
+	 left:0;
+}
+	/*Make dropdown links appear inline*/
+	ul {
+		position: static;
+		display: block;
+		width:100%;
 	}
 	/*Create vertical spacing*/
 	li {
@@ -177,8 +202,6 @@ ul li a:hover + .hidden, .hidden:hover {
 	}
 	
 }
-
-
 .link{
 	text-decoration: none; color:lightgoldenrodyellow;
 }
@@ -187,5 +210,20 @@ ul li a:hover + .hidden, .hidden:hover {
 	flex: 2; 
 	border-right-width: 1px;
 	padding-left:15%; 
-	padding-right: 15%;
+	padding-right: 10%;
+	font-style: source sans pro;
+	font-size:20px;
+	text-align: justify;
+}
+
+#about{
+	font-style: source sans pro;
+	font-size:20px;
+	width:350px;;
+}
+
+.sidebar.ex{
+	flex: 1;
+	margin:auto;
+	display: flex;
 }
